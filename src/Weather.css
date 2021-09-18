@@ -1,8 +1,167 @@
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;600;700&display=swap");
 
 .weather {
+    height: 100vh;
+    width: 100vw;
+    color: #262f63;
+}
+.weather__dark {
+    background-color: #232535;
+    color: white;
+}
+.hot {
+    background-color: #f2b07b;
+}
+.cloudy {
+    background-color: #5ac9fa;
+}
+.thunder {
+    background-color: #5ad8d6;
+}
+.hotdiv {
+    background-color: #fdc78c;
+}
+.cloudydiv {
+    background-color: #88d9fb;
+    
+}
+.thunderdiv {
+    background-color: #96f5f5;
+}
+
+.impData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dandh {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.daily {
+    width: 50%;
+    height: 490px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.daily__dark{
+    background-color: #434652;
+}
+.daily::-webkit-scrollbar {
+    display: none;
+}
+.daily h2{
+    margin: 10px 40px;
+    font-family: 'Courgette', cursive;
+}
+.daily__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    transition: transform 450ms;
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 10px 20px;
+}
+.daily__card:hover {
+    transform: scale(1.08);
+}
+.daily__img {
+    width: 50px;
+    height: 50px;
+}
+.day__night {
+    margin-left: auto;
+    padding: 20px;
+}
+.hourly {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.hourly__dark{
+    background-color: #434652;
+}
+.hourly::-webkit-scrollbar {
+    display: none;
+}
+.hourly__ele {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 10px;
+    margin-right: 10px;
+    margin: 10px auto;
+    transition: transform 450ms;
+    border-right: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.hourly__ele:hover {
+    transform: scale(1.08);
+}
+
+.hourly__img {
+    width: 50px;
+    height: 50px;
+}
+.hourly__temp {
+    font-size: 25px;
+    padding: 0px 10px;
+}
+@media only screen and (max-width: 1200px) {
+    .weather {
+        height: 100%;
+        width: 100vw;
+        
+    }
+    .impData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .dandh {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .daily {
+        width: 90%;
+        height: 490px;
+        
+        margin: 20px auto;
+    }
+    .hourly {
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    
+
+}
+
+
+/* .weather {
     width: 25%;
-    height: 750px;
+    height: 100vh;
     margin-left: auto;
     object-fit: contain;
     display: flex;
@@ -14,6 +173,9 @@
 }
 .weather__dark {
     background-color: rgba(255, 255, 255, 0.5);
+}
+body {
+    overflow: hidden;
 }
 
 .main__light {
@@ -34,9 +196,8 @@
     background-size: contain;
 }
 .container {
-    height: 750px;
+    height: 100vh;
 }
-
 
 .forms {
     margin: 10px;
@@ -70,7 +231,7 @@
     border-radius: 20px;
     margin: 10px 20px;
 }
-.daily__card:hover{
+.daily__card:hover {
     transform: scale(1.08);
 }
 
@@ -111,7 +272,7 @@
     margin-right: 10px;
     transition: transform 450ms;
 }
-.hourly__ele:hover{
+.hourly__ele:hover {
     transform: scale(1.08);
 }
 .hourly__ele__light {
@@ -159,8 +320,9 @@
     flex-direction: row;
     color: rgb(0, 0, 0);
 }
-.right__dark{
-    color: rgb(255, 255, 255);}
+.right__dark {
+    color: rgb(255, 255, 255);
+}
 
 #current__city {
     font-size: 35px;
@@ -183,31 +345,35 @@
     top: 20px;
     left: 20px;
 }
-.MuiSwitch-colorSecondary.Mui-checked{
+.MuiSwitch-colorSecondary.Mui-checked {
     color: black !important;
 }
 
-
-
 @media only screen and (max-width: 1200px) {
-    .container{
-        height: 100%;
+    .container {
         width: 100%;
+        height: 100%;
     }
-    body{
+    body {
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        overflow: unset;
     }
     .main__light {
         background-image: url(https://i.pinimg.com/236x/63/20/2a/63202a1d01004278df702a644e04d001.jpg);
+        background-size: cover;
     }
-    .main__dark{
+    .main__dark {
         background-image: url(https://i.pinimg.com/750x/69/f5/d6/69f5d62f0ab552e24274ffd5b02bbed2.jpg);
+        background-size: cover;
     }
     .right {
         position: absolute;
-        top: 20px;
+        padding: 0px;
+        margin: 0px;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -224,7 +390,7 @@
         background-color: rgba(0, 0, 0, 0.1);
         color: black;
     }
-    .right__dark{
+    .right__dark {
         color: white;
     }
     .current__temp {
@@ -233,22 +399,21 @@
     .daily {
         margin-top: 200px;
     }
-    .hourly{
-        padding: 20px  0px;
+    .hourly {
+        padding: 20px 0px;
     }
-    .left__button{
+    .left__button {
         height: 95px;
     }
-    .right__button{
+    .right__button {
         height: 95px;
     }
     .switch__theme {
         position: absolute;
         top: 10px;
         left: 10px;
-        
     }
     .forms {
         margin-top: 30px;
     }
-}
+} */

@@ -6,6 +6,10 @@ function Hourly({ data,checked }) {
     const hour = date.getHours();
 
     return (
+
+
+
+
         <div className={`hourly__ele && ${(checked? "hourly__ele__dark":"hourly__ele__light")}` }>
             <div className="hourly__time">{hour}:00</div>
             <div className="hourly__temp">{data.temp}<span>&#176;</span>C</div>

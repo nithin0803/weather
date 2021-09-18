@@ -1,0 +1,94 @@
+.current {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    align-items: center;
+}
+.current__dark{
+    background-color: #434652;
+}
+.other__data {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.other__data h3 {
+    font-weight: 400;
+}
+#place {
+    font-size: 35px;
+}
+
+.current img {
+    width: 30%;
+    height: auto;
+}
+.temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#curr__temp {
+    font-size: 100px;
+}
+#main {
+    font-size: 20px;
+    font-weight: lighter;
+}
+.sun__time {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.sun__time h3 {
+    font-weight: 400;
+}
+
+.hotdiv {
+    background-color: #fdc78c;
+}
+.cloudydiv {
+    background-color: #88d9fb;
+}
+.thunderdiv {
+    background-color: #96f5f5;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    flex: 1 !important;
+}
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.css-1480iag-MuiInputBase-root-MuiInput-root:after {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6) !important;
+}
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+    color: #ffffff !important;
+}
+@media only screen and (max-width: 1200px){
+    .current{
+        width: 90%;
+        border: none;
+    }
+    .mobilediv{
+        background-color: transparent;
+    }
+    .other__data {
+        display: none;
+    }
+    #curr__temp {
+        font-size: 80px;
+    }
+    .sun__time h3 {
+        font-weight: 200;
+    }
+}

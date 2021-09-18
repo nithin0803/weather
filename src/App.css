@@ -2,9 +2,9 @@
 html,body{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     width: 100%;
-    height: 750px;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    overflow: hidden;
+    
 }
